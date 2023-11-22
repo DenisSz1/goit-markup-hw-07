@@ -1,0 +1,32 @@
+
+.client {
+    display: flex;
+    justify-content: center;
+}
+
+.client__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    
+    fill: $color-border;
+
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: $color-accent;
+        border: 1px solid $color-accent;
+    }
+}
