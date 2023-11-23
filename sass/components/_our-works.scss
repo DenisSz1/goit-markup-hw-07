@@ -15,22 +15,18 @@
     line-height: 1.17;
 }
 
+.works-card {
+    display: flex;
+}
+
 .works-card__item {
     position: relative;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
-/*.icon-bg {
-    display: flex;
-    height: 120px;
-    margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 4px;
-    
-    background-color: $color-bg-white;
-}
-*/
 .works-card__description {
     position: absolute;
     bottom: 0;

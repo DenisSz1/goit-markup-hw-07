@@ -43,8 +43,7 @@
     text-decoration: none;
     
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     &:focus,
     &:hover {
@@ -74,8 +73,7 @@
     text-decoration: none;
 
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     &:focus,
     &:hover {
@@ -94,16 +92,6 @@
 
     fill: currentColor;
 }
-/*
-.nav-list .link:focus ,
-.nav-list .link:hover,
-.contact-list .link:focus,
-.contact-list .link:hover,
-.contact-list .tel:focus,
-.contact-list .tel:hover {
-    color: var(--accent-color);  
-    
-} */
 
 .nav__link--current {
     color: $color-accent;

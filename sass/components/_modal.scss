@@ -3,8 +3,7 @@
     top: 0;
     left: 0;
     transition-property: opacity, visibility;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     
     width: 100%;
     height: 100%;
@@ -12,7 +11,7 @@
     background-color: $color-overlay;
 }
 
-.backdrop--is-hidden {
+.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;    
@@ -33,12 +32,11 @@
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 
     transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.modal {
+.backdrop.is-hidden .modal {
     transform: scale(0.2);    
 }
 
@@ -56,8 +54,7 @@
     background-color: $color-white-primary;
     
     transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     cursor: pointer;
 
@@ -110,8 +107,7 @@
     cursor: pointer;
 
     transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     &:focus {
         border-color: $color-accent;
@@ -128,8 +124,7 @@
     left: 12px;
 
     transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 }
 
 .form-el--size {
@@ -195,7 +190,7 @@
     }
 }
 
-.label__checkbox:checked + .label__check__check-icon {
+.label__checkbox:checked + .label__check-icon {
     border-color: transparent;
     background-color: $color-accent;
     background-image: url('../images/SVG/icon\ check.svg');

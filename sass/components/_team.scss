@@ -41,6 +41,7 @@
 }
 
 .person-descriptions__subtitle {
+    margin-top: 0;
     margin-bottom: 10px;
     text-align: center;
 
@@ -72,11 +73,10 @@
     align-items: center;
     border-radius: 50%;
     
-    fill: var($color-border);
+    fill: $color-border;
 
     transition-property: border-radius, background-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     &:hover,
     &:focus {

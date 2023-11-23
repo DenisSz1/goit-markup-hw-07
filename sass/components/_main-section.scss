@@ -12,12 +12,7 @@
         ),
     url(../images/banner.jpg)
 }
-/*
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}*/
-/*banner*/
+
 
 .main {
     background-color: $color-bg-gray;
@@ -49,6 +44,7 @@
     margin-right: auto;
     padding: 10px 24px;
     border-radius: 4px;
+    border: none;
 
     background-color: $color-accent;
     color: $color-white-primary;
