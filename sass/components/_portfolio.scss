@@ -21,7 +21,7 @@
     }
 }
 
-overlay {
+.overlay {
     position: relative;
     overflow: hidden;
     
@@ -34,8 +34,7 @@ overlay {
     text-decoration: none;
     
     transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     &:hover .overlay__description,
     &:hover,
@@ -65,25 +64,15 @@ overlay {
     line-height: 1.55;
 
     transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 }
-
-// .card a {
-//     display: flex;
-//     flex-direction: column;
-// }
 
 .card-border {
     padding:20px 24px 20px 24px;
     border-style: solid;
     border-width: 0 1px 1px 1px;
-    border-color: var(--bg-card);
+    border-color: $color-card-bg;
 }
-
-// .portfolio-list a {
-//     text-decoration: none;
-// }
 
 .card-border__title {
     margin: 0;

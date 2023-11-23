@@ -19,6 +19,16 @@ footer {
     margin-right: auto;
 
     color: $color-white-primary;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.17;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.info__web {
+    color: $color-accent;
 }
 
 .info__address {
@@ -73,12 +83,11 @@ footer {
 
     border-radius: 50%;
 
-    background-color: var($color-social-bg);
+    background-color: $color-social-bg;
     fill: $color-white-primary;
 
     transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     &:hover,
     &:focus {
